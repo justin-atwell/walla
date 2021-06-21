@@ -1,3 +1,3 @@
 export default {
-    bwsUrl: 'https://api.bitcore.io/api',
+    bwsUrl: 'https://bws.bitpay.com/bws/api',
   };
