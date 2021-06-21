@@ -2,7 +2,7 @@ import bs58check from 'bs58check';
 import bip21 from 'bip21';
 import BitcoreClient from 'bitcore-wallet-client';
 
-import { parseBitcoinInputToSatoshi } from './unitsService';
+import { parseBitcoinInputToSatoshi } from './unitService';
 import config from './config';
 
 export const SPEND_UNCONFIRMED = true;
@@ -66,7 +66,7 @@ function validateWallet(wallet) {
 
 /**
  * Get an URL to explore the Address
- * @param {string} address Bitcoin address we want to explore
+ * @param {string} address 
  * @param {string} network Bitcoin network
  * @returns {string}
  */
@@ -223,9 +223,7 @@ export async function sendTransaction(wallet, address, amount, feeLevel) {
   let txp = await createTxProposal(client, address, amountSat, feeLevel);
 
   txp = await publishTxProposal(client, txp);
-
   txp = await signTxProposal(client, txp);
-
   txp = await broadcastTxProposal(client, txp);
 
   return txp;

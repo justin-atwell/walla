@@ -10,7 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "bitcore-wallet-client": "^8.7.4",
+    "bitcore-wallet-client": "^6.7.5",
+    "bip21": "^2.0.3",
+    "bs58check": "^2.1.2",
+    "bignumber.js": "^9.0.0",
     "react": "17.0.1",
     "react-native": "0.64.2"
   },
